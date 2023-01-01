@@ -10,30 +10,26 @@
     <?php
     try {
         require 'connect.php';
-        $sql = "SELECT * FROM customer";
+        $sql = "SELECT * FROM country";
         $stmt = $conn->prepare($sql);
         $stmt->execute();
 
         //แบบที่ 1
         //while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
             //echo '<br>' .
-                //'รหัสลูกค้าของฉันแบบที่ 1 : ' .
-                //$result['CustomerID'] .
-                //' วันเกิด : ' .
-                //$result['Birthdate'] .
-                //' ยอดหนี้ : ' .
-                //$result['OutstandingDebt'];
+                //' รหัสประเทศของลูกค้า : ' .
+                //$result['CountryCode'] .
+                //' ชื่อประเทศ : ' .
+                //$result['CountryName'];
         //}
         
         //แบบที่ 2
         while ($result = $stmt->fetch(PDO::FETCH_NUM)) {
             echo '<br>' .
-                'รหัสลูกค้าของฉันแบบที่ 1 : ' .
+                'รหัสประเทศของลูกค้า : ' .
                 $result[0] .
-                ' วันเกิด : ' .
-                $result[2] .
-                ' ยอดหนี้ : ' .
-                $result[5];
+                ' ชื่อประเทศ : ' .
+                $result[1] ;
         }
 
     } catch (PDOException $e) {
