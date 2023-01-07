@@ -10,7 +10,7 @@
     <?php
         require "connect.php";
         // ลองให้โชว์ข้อมูล customer
-        $sql = "SELECT * FROM customer"; 
+        $sql = "SELECT * FROM customer,country WHERE customer.CountryCode = country.CountryCode" ;
         $stmt = $conn->prepare($sql);
         $stmt->execute();
         echo '<br>';
@@ -19,7 +19,7 @@
         //print_r($result);
 
         foreach ($result as $r) {
-            print $r['CustomerID'] .'--'. $r['Name'] .'<br>';
+            print $r['CustomerID'] .'--'. $r['Name'] .'--'. $r['OutstandingDebt'] .'--'. $r['CountryName'] .'<br>';
         }
     ?>
 </body>
