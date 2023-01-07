@@ -27,7 +27,9 @@ $stmt->execute();
 ?>
  
   <tr>
-    <td>    <?php echo $result["CountryCode"]; ?>     </td>
+    <td>    <a href="detail2.php?CountryCode=<?php echo $result["CountryCode"]; ?>">
+    <?php echo $result["CountryCode"]; ?>
+    </td>
     <td>    <?php echo $result["CountryName"]; ?>     </td>
 
     

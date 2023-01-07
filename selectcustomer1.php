@@ -31,7 +31,10 @@ $stmt->execute();
 ?>
  
   <tr>
-    <td>    <?php echo $result["CustomerID"]; ?>     </td>
+    <td>
+      <a href="detail.php?CustomerID=<?php echo $result["CustomerID"]; ?>">
+      <?php echo $result["CustomerID"]; ?>
+    </td>
     <td>    <?php echo $result["Name"]; ?>     </td>
      <td>   <?php echo $result["Birthdate"]; ?>  </td>
     <td>    <?php echo $result["Email"]; ?></td>
