@@ -9,7 +9,7 @@
 <body>
     <h1>Test SQL Injection</h1>
     <form action="injection2.php" method="GET">
-    <input type="text" placeholder="Enter Country Code" name="CountryCode">
+    <input type="text" placeholder="Enter Country Name" name="CountryName">
     <br><br>
     <input type="submit">
     </form>
